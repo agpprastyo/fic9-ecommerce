@@ -1,16 +1,16 @@
+import 'package:fic9_flutter_app/data/data_sources/auth_local_datasource.dart';
 import 'package:fic9_flutter_app/data/models/requests/login_request_model.dart';
-import 'package:fic9_flutter_app/presentation/auth/bloc/login/login_bloc.dart';
-import 'package:fic9_flutter_app/presentation/auth/register_page.dart';
-import 'package:fic9_flutter_app/presentation/home/dashboard_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 
 import '../../common/components/button.dart';
 import '../../common/components/custom_text_field.dart';
 import '../../common/constants/colors.dart';
 import '../../common/components/spaces.dart';
 import '../../common/constants/images.dart';
+import '../dashboard/dashboard_page.dart';
+import 'bloc/login/login_bloc.dart';
+import 'register_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -47,7 +47,7 @@ class _LoginPageState extends State<LoginPage> {
           const SpaceHeight(24.0),
           const Center(
             child: Text(
-              "E-Commerce Code with Agprastyo",
+              "E-Commerce Code with Bahri",
               style: TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.w700,
@@ -82,7 +82,8 @@ class _LoginPageState extends State<LoginPage> {
             listener: (context, state) {
               state.maybeWhen(
                   orElse: () {},
-                  success: (data) {
+                  success: (data) async {
+                    AuthLocalDatasource().saveAuthData(data);
                     Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(

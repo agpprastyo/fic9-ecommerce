@@ -1,7 +1,12 @@
-import 'package:fic9_flutter_app/presentation/auth/bloc/register/register_bloc.dart';
-import 'package:fic9_flutter_app/presentation/auth/splash_page.dart';
+import 'package:fic9_flutter_app/data/data_sources/auth_local_datasource.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import 'presentation/auth/bloc/login/login_bloc.dart';
+import 'presentation/auth/bloc/register/register_bloc.dart';
+import 'presentation/auth/login_page.dart';
+import 'presentation/dashboard/dashboard_page.dart';
+import 'presentation/home/bloc/products/products_bloc.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,22 +15,37 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => RegisterBloc(),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => RegisterBloc(),
+        ),
+        BlocProvider(
+          create: (context) => LoginBloc(),
+        ),
+        BlocProvider(
+          create: (context) => ProductsBloc()..add(const ProductsEvent.getAll()),
+        ),
+      ],
       child: MaterialApp(
         title: 'Flutter Demo',
         theme: ThemeData(
-
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: const SplashPage(),
+        home: FutureBuilder<bool>(
+          future: AuthLocalDatasource().isLogin(),
+          builder: (context, snapshot) {
+            if (snapshot.data != null && snapshot.data!) {
+              return const DashboardPage();
+            } else {
+              return const LoginPage();
+            }
+          },
+        ),
       ),
     );
   }
 }
-
-

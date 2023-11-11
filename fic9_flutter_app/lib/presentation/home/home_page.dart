@@ -195,7 +195,7 @@ class _HomePageState extends State<HomePage> {
             builder: (context, state) {
               return state.maybeWhen(
                 orElse: () {
-                  return Center(
+                  return const Center(
                     child: CircularProgressIndicator(),
                   );
                 },

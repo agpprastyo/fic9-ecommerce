@@ -1,6 +1,6 @@
-import 'package:fic9_flutter_app/data/data_sources/auth_local_datasource.dart';
-import 'package:fic9_flutter_app/presentation/auth/login_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_fic9_ecommerce_app/data/datasources/auth_local_datasource.dart';
+import 'package:flutter_fic9_ecommerce_app/presentation/auth/login_page.dart';
 
 class AccountPage extends StatefulWidget {
   const AccountPage({super.key});
@@ -16,7 +16,7 @@ class _AccountPageState extends State<AccountPage> {
       body: Center(
         child: ElevatedButton(
           onPressed: () async {
-            AuthLocalDatasource().removeAuthData();
+            await AuthLocalDatasource().removeAuthData();
             Navigator.pushReplacement(context,
                 MaterialPageRoute(builder: (context) {
               return const LoginPage();

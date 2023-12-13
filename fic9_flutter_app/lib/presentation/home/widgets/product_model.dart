@@ -1,4 +1,4 @@
-import 'package:fic9_flutter_app/common/extensions/int_ext.dart';
+import 'package:flutter_fic9_ecommerce_app/common/extensions/int_ext.dart';
 
 class ProductModel {
   final List<String> images;

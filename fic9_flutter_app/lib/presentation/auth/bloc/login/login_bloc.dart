@@ -1,7 +1,7 @@
-import 'package:fic9_flutter_app/data/data_sources/auth_remote_datasource.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
+import '../../../../data/datasources/auth_remote_datasource.dart';
 import '../../../../data/models/requests/login_request_model.dart';
 import '../../../../data/models/responses/auth_response_model.dart';
 

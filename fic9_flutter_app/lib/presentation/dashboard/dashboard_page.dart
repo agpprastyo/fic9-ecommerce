@@ -1,6 +1,6 @@
-import 'package:fic9_flutter_app/presentation/account/account_page.dart';
-import 'package:fic9_flutter_app/presentation/home/home_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_fic9_ecommerce_app/presentation/account/account_page.dart';
+import 'package:flutter_fic9_ecommerce_app/presentation/home/home_page.dart';
 
 import '../../common/constants/colors.dart';
 import '../../common/constants/images.dart';

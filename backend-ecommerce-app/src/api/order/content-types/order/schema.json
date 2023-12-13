@@ -36,6 +36,12 @@
         "done",
         "cancel"
       ]
+    },
+    "noResi": {
+      "type": "string"
+    },
+    "buyerId": {
+      "type": "biginteger"
     }
   }
 }

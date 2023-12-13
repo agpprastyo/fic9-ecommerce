@@ -1,14 +1,14 @@
+import 'package:fic9_flutter_app/data/datasources/auth_local_datasource.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_fic9_ecommerce_app/data/datasources/auth_local_datasource.dart';
-import 'package:flutter_fic9_ecommerce_app/presentation/auth/login_page.dart';
-import 'package:flutter_fic9_ecommerce_app/presentation/auth/splash_page.dart';
-import 'package:flutter_fic9_ecommerce_app/presentation/cart/bloc/cart/cart_bloc.dart';
-import 'package:flutter_fic9_ecommerce_app/presentation/dashboard/dashboard_page.dart';
-import 'package:flutter_fic9_ecommerce_app/presentation/home/bloc/products/products_bloc.dart';
+
 
 import 'presentation/auth/bloc/login/login_bloc.dart';
 import 'presentation/auth/bloc/register/register_bloc.dart';
+import 'presentation/auth/login_page.dart';
+import 'presentation/cart/bloc/cart/cart_bloc.dart';
+import 'presentation/dashboard/dashboard_page.dart';
+import 'presentation/home/bloc/products/products_bloc.dart';
 
 void main() {
   runApp(const MyApp());

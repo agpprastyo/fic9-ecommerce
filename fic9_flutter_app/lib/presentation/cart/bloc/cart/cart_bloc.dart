@@ -1,5 +1,4 @@
-import 'package:bloc/bloc.dart';
-import 'package:flutter_fic9_ecommerce_app/data/models/responses/products_response_model.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../widgets/cart_model.dart';

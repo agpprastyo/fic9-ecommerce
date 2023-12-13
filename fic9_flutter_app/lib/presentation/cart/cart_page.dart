@@ -1,16 +1,13 @@
+import 'package:fic9_flutter_app/common/extensions/int_ext.dart';
+import 'package:fic9_flutter_app/presentation/cart/bloc/cart/cart_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
-import 'package:flutter_fic9_ecommerce_app/common/extensions/int_ext.dart';
-import 'package:flutter_fic9_ecommerce_app/presentation/cart/bloc/cart/cart_bloc.dart';
 
 import '../../common/components/button.dart';
 import '../../common/components/row_text.dart';
 import '../../common/components/spaces.dart';
 import '../../common/constants/colors.dart';
-import '../../data/models/responses/products_response_model.dart';
 import 'widgets/cart_item_widget.dart';
-import 'widgets/cart_model.dart';
 
 class CartPage extends StatefulWidget {
   const CartPage({
@@ -82,11 +79,11 @@ class _CartPageState extends State<CartPage> {
                       },
                       loaded: (carts) {
                         int totalPrice = 0;
-                        carts.forEach((element) {
+                        for (var element in carts) {
                           totalPrice +=
                               int.parse(element.product.attributes.price) *
                                   element.quantity;
-                        });
+                        }
                         return RowText(
                           label: 'Total Harga',
                           value: totalPrice.currencyFormatRp,

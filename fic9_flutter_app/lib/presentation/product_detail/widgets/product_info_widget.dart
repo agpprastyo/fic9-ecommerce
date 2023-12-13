@@ -1,10 +1,10 @@
+import 'package:fic9_flutter_app/common/extensions/int_ext.dart';
+import 'package:fic9_flutter_app/data/models/responses/products_response_model.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_fic9_ecommerce_app/common/extensions/int_ext.dart';
-import 'package:flutter_fic9_ecommerce_app/data/models/responses/products_response_model.dart';
+
 
 import '../../../common/components/spaces.dart';
 import '../../../common/constants/colors.dart';
-import '../../home/widgets/product_model.dart';
 
 class ProductInfoWidget extends StatelessWidget {
   const ProductInfoWidget({

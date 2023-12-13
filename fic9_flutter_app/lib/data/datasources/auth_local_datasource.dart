@@ -1,6 +1,4 @@
-import 'dart:convert';
-
-import 'package:flutter_fic9_ecommerce_app/data/models/responses/auth_response_model.dart';
+import 'package:fic9_flutter_app/data/models/responses/auth_response_model.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class AuthLocalDatasource {

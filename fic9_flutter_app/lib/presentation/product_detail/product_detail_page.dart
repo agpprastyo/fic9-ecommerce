@@ -4,14 +4,13 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../common/components/button.dart';
 import '../../common/components/spaces.dart';
 import '../../common/constants/colors.dart';
-import '../../common/constants/images.dart' as localImages;
+import '../../common/constants/images.dart' as local_images;
 import '../../common/constants/variables.dart';
 import '../../data/models/responses/products_response_model.dart';
 import '../cart/bloc/cart/cart_bloc.dart';
 import '../cart/cart_page.dart';
 import '../cart/widgets/cart_model.dart';
 import '../home/widgets/image_slider.dart';
-import '../home/widgets/product_model.dart';
 import 'widgets/product_description_widget.dart';
 import 'widgets/product_info_widget.dart';
 
@@ -29,10 +28,10 @@ class ProductDetailPage extends StatefulWidget {
 class _ProductDetailPageState extends State<ProductDetailPage> {
   EdgeInsets paddingHorizontal = const EdgeInsets.symmetric(horizontal: 20.0);
   final List<String> images = [
-    localImages.Images.product3,
-    localImages.Images.product3,
-    localImages.Images.product3,
-    localImages.Images.product3,
+    local_images.Images.product3,
+    local_images.Images.product3,
+    local_images.Images.product3,
+    local_images.Images.product3,
   ];
   @override
   Widget build(BuildContext context) {

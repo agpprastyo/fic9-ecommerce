@@ -1,6 +1,6 @@
+import 'package:fic9_flutter_app/data/datasources/auth_local_datasource.dart';
+import 'package:fic9_flutter_app/presentation/auth/login_page.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_fic9_ecommerce_app/data/datasources/auth_local_datasource.dart';
-import 'package:flutter_fic9_ecommerce_app/presentation/auth/login_page.dart';
 
 class AccountPage extends StatefulWidget {
   const AccountPage({super.key});

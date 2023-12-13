@@ -19,7 +19,7 @@ module.exports = createCoreController('api::order.order', ({strapi}) => ({
 
         const payload = {
             external_id: result.data.id.toString(),
-            payer_email: 'prasetyo.agpr@gmail.com',
+            payer_email: 'codewithbahri@gmail.com',
             description: 'Payment for product',
             amount: result.data.attributes.totalPrice
         }
@@ -38,3 +38,4 @@ module.exports = createCoreController('api::order.order', ({strapi}) => ({
 
     }
 }));
+

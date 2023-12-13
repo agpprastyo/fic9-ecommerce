@@ -1,7 +1,7 @@
+import 'package:fic9_flutter_app/data/datasources/auth_local_datasource.dart';
+import 'package:fic9_flutter_app/data/models/requests/login_request_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_fic9_ecommerce_app/data/datasources/auth_local_datasource.dart';
-import 'package:flutter_fic9_ecommerce_app/data/models/requests/login_request_model.dart';
 
 import '../../common/components/button.dart';
 import '../../common/components/custom_text_field.dart';

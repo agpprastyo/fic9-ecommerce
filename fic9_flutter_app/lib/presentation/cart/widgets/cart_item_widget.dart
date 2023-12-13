@@ -1,13 +1,12 @@
+import 'package:fic9_flutter_app/common/constants/variables.dart';
+import 'package:fic9_flutter_app/common/extensions/int_ext.dart';
+import 'package:fic9_flutter_app/presentation/cart/bloc/cart/cart_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_fic9_ecommerce_app/common/constants/variables.dart';
-import 'package:flutter_fic9_ecommerce_app/common/extensions/int_ext.dart';
-import 'package:flutter_fic9_ecommerce_app/data/models/responses/products_response_model.dart';
-import 'package:flutter_fic9_ecommerce_app/presentation/cart/bloc/cart/cart_bloc.dart';
 
 import '../../../common/components/spaces.dart';
 import '../../../common/constants/colors.dart';
-import '../../../common/constants/images.dart' as localImages;
+import '../../../common/constants/images.dart' as local_images;
 import 'cart_model.dart';
 
 class CartItemWidget extends StatefulWidget {
@@ -60,7 +59,7 @@ class _CartItemWidgetState extends State<CartItemWidget> {
                     InkWell(
                       onTap: () {},
                       child: const ImageIcon(
-                        AssetImage(localImages.Images.iconTrash),
+                        AssetImage(local_images.Images.iconTrash),
                         size: 24.0,
                       ),
                     ),

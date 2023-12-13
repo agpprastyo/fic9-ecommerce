@@ -1,6 +1,6 @@
+import 'package:fic9_flutter_app/presentation/cart/cart_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_fic9_ecommerce_app/presentation/cart/cart_page.dart';
 
 import '../../common/components/search_input.dart';
 import '../../common/components/spaces.dart';
@@ -8,7 +8,6 @@ import '../../common/constants/colors.dart';
 import '../../common/constants/images.dart';
 import '../cart/bloc/cart/cart_bloc.dart';
 import 'bloc/products/products_bloc.dart';
-import 'widgets/category_button.dart';
 import 'widgets/image_slider.dart';
 import 'widgets/product_card.dart';
 import 'widgets/product_model.dart';

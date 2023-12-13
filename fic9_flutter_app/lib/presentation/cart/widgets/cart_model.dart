@@ -1,7 +1,4 @@
-
-
-
-import 'package:flutter_fic9_ecommerce_app/common/extensions/string_ext.dart';
+import 'package:fic9_flutter_app/common/extensions/string_ext.dart';
 
 import '../../../data/models/responses/products_response_model.dart';
 
